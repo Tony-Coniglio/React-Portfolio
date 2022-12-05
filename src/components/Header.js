@@ -1,9 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Navigation from "./Navigation";
+import About from "./About";
+import Contact from "./Contact";
+import Portfolio from "./Portfolio";
+import Resume from "./Resume";
 
-function Header () {
-    const HeaderText = 'Tony Coniglio';
-    return <p>{HeaderText}</p>;
+function Header() {
+    const [currentPage, handlePageChange] = useState("About");
+  
+    // The renderPage method uses a switch statement to render the appropriate current page
+    const renderPage = () => {
+      switch (currentPage) {
+        case "About":
+          return <About />;
+        case "Portfolio":
+          return <Portfolio />;
+        case "Contact":
+          return <Contact />;
+        case "Resume":
+          return <Resume />;
+  
+        default:
+          return <About />;
+      }
+    };
 
-}
 
-export default Header;
+    return (
+        <div>
+          <nav className="navbar">
+            <div className="navbar-brand">
+              <a
+                className="navbar-item"
+                rel="noreferrer"
+                target="_blank"
+                href="https://github.com/Tony-Coniglio"
+              >
+                <span className="content is-large">Tony Coniglio</span>
+              </a>
+            </div>
+          </nav>
+    
+          <Navigation
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+          />
+    
+          <main>
+            <div>{renderPage(currentPage)}</div>
+          </main>
+        </div>
+      );
+    };
+
+
+
+
+
+    export default Header;
+
