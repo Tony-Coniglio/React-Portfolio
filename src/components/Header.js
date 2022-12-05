@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Header () {
-    const HeaderText = 'testing 123';
+    const HeaderText = 'Tony Coniglio';
     return <p>{HeaderText}</p>;
 
 }
