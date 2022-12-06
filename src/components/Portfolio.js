@@ -5,14 +5,14 @@ const projects =
     [
         {
             id: 0,
-            name: 'Vacation Insight',
-            image: './images/vacation insight.jpeg',
+            projectName: 'Vacation Insight',
+            image: './images/vacationinsight.png',
             repo: 'https://github.com/Tony-Coniglio/Vacation-Insight',
             link: 'https://tony-coniglio.github.io/Vacation-Insight/',
         },
         {
             id: 1,
-            name: 'Code Bank',
+            projectName: 'Code Bank',
             image: './images/BFLogo.png',
             repo: 'https://github.com/dcodner24/Code-Bank',
             link: 'https://code-bank-bc.herokuapp.com/',

@@ -44,7 +44,18 @@ footer.footer {
   background-color: rgb(255, 255, 255);
 }
 
+.card-content {
+background-color: black;
+  color: black
+}
 
+title {
+  color: black
+}
+
+subtitle {
+  color: black
+}
 
 
 @media only screen and (max-width: 1024px) {
